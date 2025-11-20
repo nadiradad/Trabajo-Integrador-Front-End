@@ -1,0 +1,177 @@
+:root {
+    --dark-gray: hsl(0, 0%, 63%);
+    --black: hsl(0, 0%, 0%);
+    --white: hsl(0, 0%, 100%);
+    --very-dark-gray: hsl(0, 0%, 27%);
+}
+
+body {
+    margin: 0;
+    font-family: "League Spartan", sans-serif;
+    font-size: 12px;
+    color: var(--very-dark-gray);
+}
+
+/* NAVBAR */
+.header {
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    width: 80px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.5em;
+    text-transform: lowercase;
+}
+
+/* GRID PRINCIPAL */
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+}
+
+.hero-img {
+    background: url("../images/desktop-image-hero-1.jpg") center/cover no-repeat;
+    height: 350px;
+}
+
+.hero-text {
+    padding: 30px;
+}
+
+.hero-text h1 {
+    font-size: 4em;
+    color: var(--black);
+}
+
+.hero-text p {
+    line-height: 1.4;
+    font-size: 1.5em;
+    color: var(--dark-gray);
+}
+
+.btn-shop {
+    text-align: left;
+    margin-top: 20px;
+    border: none;
+    background-color: transparent;
+    color: var(--dark-gray);
+    padding: 0px;
+    letter-spacing: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.about-img-dark {
+    background: url("../images/image-about-dark.jpg") center/cover no-repeat;
+    height: 250px;
+}
+
+.about-text {
+    padding: 30px;
+}
+
+.about-img-light {
+    background: url("../images/image-about-light.jpg") center/cover no-repeat;
+    height: 250px;
+}
+
+.about-text h2 {
+    font-size: 2em;
+    color: var(--black);
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+
+.about-text p {
+    line-height: 1.4;
+    font-size: 1.5em;
+}
+
+/* DESKTOP */
+@media (min-width: 900px) {
+    .hero-grid {
+        display: grid;
+        grid-template-areas:
+            "hero-img hero-img hero-text hero-text"
+            "about-img-dark about-text about-text about-img-light";
+        grid-template-columns: 1fr 2fr 1fr 1fr; /* 4 columnas iguales */
+        grid-template-rows: auto auto;
+        height: 100vh;
+    }
+
+    .hero-img {
+        grid-area: hero-img;
+        height: 100%;
+        min-height: 400px;
+        height: 70vh;
+    }
+
+    .hero-text {
+        grid-area: hero-text;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 60px;
+        position: relative;
+    }
+
+    .arrows{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    .arrows button{
+        width: 100px;
+        height: 100px;
+    }
+
+    .about-img-dark {
+        grid-area: about-img-dark;
+        height: 100%;
+        min-height: 300px;
+    }
+
+    .about-text {
+        grid-area: about-text;
+        padding: 60px;
+    }
+
+    .about-img-light {
+        grid-area: about-img-light;
+        height: 100%;
+        min-height: 300px;
+    }
+
+    .nav-links a {
+        color: var(--white);
+    }
+}
+
