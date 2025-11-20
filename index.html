@@ -11,8 +11,10 @@
 </head>
 <body>
     <header class="header">
-        <nav class="navbar">
-            <img src="images/logo.svg" alt="Logo" class="logo" />
+        <div class="hamburger-btn" id="hamburger-btn" onclick=toggle></div>
+        <img src="images/logo.svg" alt="Logo" class="logo" />
+        <nav class="navbar" id="navbar">
+            <div class="close-icon" onclick=toggle></div>
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Shop</a></li>
@@ -48,5 +50,7 @@
 
         <section class="about-img-light"></section>
     </main>
+
+    <script src="./js/script.js"></script>
 </body>
 </html>
