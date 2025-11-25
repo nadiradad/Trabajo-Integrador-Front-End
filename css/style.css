@@ -15,13 +15,13 @@ body {
 /* NAVBAR */
 .header {
   position: absolute;
-  box-sizing: border-box;
   top: 0;
   width: 100%;
   padding: 20px;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  gap: 20px;
+  z-index: 10;
 }
 
 .hamburger-btn {
@@ -88,6 +88,9 @@ body {
   grid-template-rows: auto auto auto auto;
 }
 
+
+/* HERO MOBILE IMAGE */
+
 .hero-img {
   background: url("../images/desktop-image-hero-1.jpg") center/cover no-repeat;
   height: 350px;
@@ -121,13 +124,39 @@ body {
   text-transform: uppercase;
 }
 
+
+.arrows {
+  margin-top: 20px;
+  display: flex;
+}
+
+.arrows button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: var(--black);
+  color: var(--white);
+  cursor: pointer;
+  font-size: 2em;
+}
+
+
 .about-img-dark {
   background: url("../images/image-about-dark.jpg") center/cover no-repeat;
   height: 250px;
 }
 
 .about-text {
-  padding: 30px;
+    text-align: center;
+    padding: 20px;  
+    width: 70%;
+  }
+
+.about-text p {
+  padding: 20px;
+  line-height: 1.4;
+  font-size: 1.5em;
+  color: var(--dark-gray);
 }
 
 .about-img-light {
@@ -143,8 +172,8 @@ body {
 }
 
 .about-text p {
-  line-height: 1.4;
-  font-size: 1.5em;
+  line-height: 1;
+  font-size: 1.4em; 
 }
 
 /* DESKTOP */
@@ -166,24 +195,24 @@ body {
     grid-template-areas:
       "hero-img hero-img hero-text hero-text"
       "about-img-dark about-text about-text about-img-light";
-    grid-template-columns: 1fr 2fr 1fr 1fr; /* 4 columnas iguales */
-    grid-template-rows: auto auto;
-    height: 100vh;
+    grid-template-columns: 1.5fr 1.4fr 1fr 1.3fr; /* 4 columnas iguales */
+    grid-template-rows: 70vh 300px;
+    height: auto;
   }
 
   .hero-img {
     grid-area: hero-img;
-    height: 100%;
-    min-height: 400px;
     height: 70vh;
   }
 
   .hero-text {
+    font-size: 11px;
     grid-area: hero-text;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
     position: relative;
   }
 
@@ -191,28 +220,43 @@ body {
     position: absolute;
     left: 0;
     bottom: 0;
+    display: flex;
   }
 
   .arrows button {
-    width: 100px;
-    height: 100px;
+    width: 94px;
+    height: 80px;
   }
 
   .about-img-dark {
     grid-area: about-img-dark;
     height: 100%;
-    min-height: 300px;
   }
 
   .about-text {
     grid-area: about-text;
-    padding: 60px;
+    padding: 40px;
+  }
+
+  .about-text h2 {
+    padding-left: 10px;
+    text-align: start;
+    font-size: 1.5em;
+    color: var(--black);
+    text-transform: uppercase;
+    letter-spacing: 8px;
+  }
+  
+  .about-text p {
+    text-align: start;
+    font-size: 1.3em;
+    color: var(--dark-gray);
   }
 
   .about-img-light {
     grid-area: about-img-light;
     height: 100%;
-    min-height: 300px;
+    margin-left: -70px;
   }
 
   .close-icon {
