@@ -1,56 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
+  </head>
+  <body>
     <header class="header">
-        <div class="hamburger-btn" id="hamburger-btn" onclick=toggle></div>
-        <img src="images/logo.svg" alt="Logo" class="logo" />
-        <nav class="navbar" id="navbar">
-            <div class="close-icon" onclick=toggle></div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+      <div class="hamburger-btn" id="hamburger-btn" onclick="toggle"></div>
+      <img src="images/logo.svg" alt="Logo" class="logo" />
+      <nav class="navbar" id="navbar">
+        <div class="close-icon" onclick="toggle"></div>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <main class="hero-grid">
-        <section class="hero-img"></section>
+    <main>
+      <section class="hero">
+        <div class="left">
+          <img
+            src="./images/desktop-image-hero-1.jpg"
+            class="carousel-img active"
+          />
+          <img src="./images/desktop-image-hero-2.jpg" class="carousel-img" />
+          <img src="./images/desktop-image-hero-3.jpg" class="carousel-img" />
+        </div>
+        <div class="right">
+          <h1>Discover innovative ways to decorate</h1>
+          <p>
+            We provide unmatched quality, comfort, and style for property owners
+            across the country. Our experts combine form and function in
+            bringing your vision to life. Create a room in your own style with
+            our collection and make your property a reflection of you and what
+            you love.
+          </p>
+          <a href="#" class="btn-shop"> SHOP NOW &rarr; </a>
+        </div>
+        <div class="arrows">
+          <button class="arrow left">
+            <img src="./images/icon-angle-left.svg" alt="left arrow" />
+          </button>
+          <button class="arrow right">
+            <img src="./images/icon-angle-right.svg" alt="right arrow" />
+          </button>
+        </div>
+      </section>
 
-        <section class="hero-text">
-            <h1>Discover innovative ways to decorate</h1>
-            <p>
-                We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.
-            </p>
-            <button class="btn-shop">Shop Now</button>
-            <div class="arrows">
-                <button><</button>
-                <button>></button>
-            </div>
-        </section>
-        
-        <section class="about-img-dark"></section>
-
-        <section class="about-text">
-            <h2>About our furniture</h2>
-            <p>
-                Our multifunctional collection blends design and function to suit your individual taste. Make each room unique, or pick a cohesive theme that best express your interests and what inspires you. Find the furniture pieces you need, from traditional to contemporary styles or anything in between. Product specialists are available to help you create your dream space.
-            </p>
-        </section>
-
-        <section class="about-img-light"></section>
+      <section class="about">
+        <div class="about-left"></div>
+        <div class="about-text">
+          <h2>About our furniture</h2>
+          <p>
+            Our multifunctional collection blends design and function to suit
+            your individual taste. Make each room unique, or pick a cohesive
+            theme that best express your interests and what inspires you. Find
+            the furniture pieces you need, from traditional to contemporary
+            styles or anything in between. Product specialists are available to
+            help you create your dream space.
+          </p>
+        </div>
+        <div class="about-right"></div>
+      </section>
     </main>
 
     <script src="./js/script.js"></script>
-</body>
+  </body>
 </html>
