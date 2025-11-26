@@ -1,3 +1,4 @@
+/*MOBILE*/
 :root {
   --dark-gray: hsl(0, 0%, 63%);
   --black: hsl(0, 0%, 0%);
@@ -17,7 +18,7 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
-  padding: 20px;
+  padding: 40px;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -49,6 +50,7 @@ body {
 .logo {
   width: 80px;
   height: auto;
+  margin-left: 32px;
   object-fit: contain;
   transform: translateX(100%);
 }
@@ -93,22 +95,24 @@ body {
 /* HERO MOBILE IMAGE */
 
 .hero-img {
-  background: url("../images/desktop-image-hero-1.jpg") center/cover no-repeat;
-  height: 350px;
+  background: url("../images/mobile-image-hero-1.jpg") center/cover no-repeat;
+  height: 450px;
 }
 
 .hero-text {
+  position: relative;
   padding: 30px;
 }
 
 .hero-text h1 {
-  font-size: 4em;
+  font-size: 48px;
+  line-height: 1.1;
   color: var(--black);
 }
 
 .hero-text p {
   line-height: 1.4;
-  font-size: 1.5em;
+  font-size: 16px;
   color: var(--dark-gray);
 }
 
@@ -117,7 +121,7 @@ body {
   margin-top: 20px;
   border: none;
   background-color: transparent;
-  color: var(--dark-gray);
+  color: var(--black);
   padding: 0px;
   letter-spacing: 12px;
   cursor: pointer;
@@ -148,15 +152,14 @@ body {
 }
 
 .about-text {
-    text-align: center;
-    padding: 20px;  
-    width: 70%;
+    text-align: start;
+    padding: 30px;  
+    
   }
 
 .about-text p {
-  padding: 20px;
   line-height: 1.4;
-  font-size: 1.5em;
+  font-size: 16px;
   color: var(--dark-gray);
 }
 
@@ -166,16 +169,19 @@ body {
 }
 
 .about-text h2 {
-  font-size: 2em;
+  font-size: 1.4em;
+  padding-left: 10px;
   color: var(--black);
   text-transform: uppercase;
-  letter-spacing: 8px;
+  letter-spacing: 5px;
 }
 
 .about-text p {
-  line-height: 1;
+  padding: 13px;
+  line-height: 1.4;
   font-size: 1.4em; 
 }
+
 
 /* DESKTOP */
 @media (min-width: 900px) {
@@ -187,7 +193,9 @@ body {
   }
 
   .logo{
-  transform: translateX(0);
+    height: 15px;
+    margin-left: 10px;
+    transform: translateX(0);
 
   }
 
@@ -196,25 +204,57 @@ body {
     grid-template-areas:
       "hero-img hero-img hero-text hero-text"
       "about-img-dark about-text about-text about-img-light";
-    grid-template-columns: 1.5fr 1.4fr 1fr 1.3fr; /* 4 columnas iguales */
-    grid-template-rows: 70vh 300px;
+    grid-template-columns: 2.1fr 2.1fr 0.8fr 2.1fr; 
+    grid-template-rows: 70vh 240px;
     height: auto;
   }
 
   .hero-img {
+    background: url("../images/desktop-image-hero-1.jpg") center/cover no-repeat;
     grid-area: hero-img;
     height: 70vh;
   }
 
   .hero-text {
-    font-size: 11px;
+    font-size: 10px;
     grid-area: hero-text;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 60px;
     position: relative;
+  }
+
+  .hero-text h1 {
+    margin-bottom: 3px;
+    font-size: 40px;
+    line-height: 1;
+    color: var(--black);
+  }
+
+  .hero-text p {
+    margin-bottom: 3px;
+    line-height: 1.2;
+    font-size: 16px;
+    color: var(--dark-gray);
+  } 
+  
+  .btn-shop {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 3px;
+    border: none;
+    background-color: transparent;
+    color: var(--black);
+    padding: 0;
+    padding-right: 15px; 
+    letter-spacing: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1em;
   }
 
   .arrows {
@@ -225,8 +265,8 @@ body {
   }
 
   .arrows button {
-    width: 94px;
-    height: 80px;
+    width: 76px;
+    height: 70px;
   }
 
   .about-img-dark {
@@ -235,29 +275,34 @@ body {
   }
 
   .about-text {
-    grid-area: about-text;
-    padding: 40px;
+    padding-top: 50px;
+    text-align: left;
+    width: 125%; 
+    padding-inline: 40px;
   }
+
 
   .about-text h2 {
     padding-left: 10px;
+    margin-bottom: 1px;
     text-align: start;
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: var(--black);
     text-transform: uppercase;
     letter-spacing: 8px;
   }
   
   .about-text p {
-    text-align: start;
+    margin-top: 0px;
     font-size: 1.3em;
     color: var(--dark-gray);
   }
+  
 
   .about-img-light {
     grid-area: about-img-light;
     height: 100%;
-    margin-left: -70px;
+    
   }
 
   .close-icon {
@@ -278,4 +323,6 @@ body {
   .nav-links a {
     color: var(--white);
   }
+
+  
 }
